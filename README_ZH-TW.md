@@ -30,7 +30,7 @@
 
 ## 簡介
 
-這是一個使用 [FastMCP](https://fastmcp.wiki) 自動生成的 MCP 伺服器，用於存取 Crunchbase4 API。
+這是一個 MCP 伺服器，用於存取 Crunchbase4 API。
 
 - **PyPI 套件名**: `bach-crunchbase4`
 - **版本**: 1.0.0
@@ -107,8 +107,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "crunchbase4": {
-      "command": "python",
-      "args": ["E:\path\to\crunchbase4\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-crunchbase4", "bach_crunchbase4"],
       "env": {
         "API_KEY": "your_api_key_here"
       }
@@ -139,7 +139,6 @@ Get company details such as - about - founded_year  - funding - industries - loc
 
 ## 技术栈
 
-- **FastMCP**: 快速、Pythonic 的 MCP 服务器框架
 - **传输协议**: stdio
 - **HTTP 客户端**: httpx
 

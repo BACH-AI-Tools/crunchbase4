@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Crunchbase4",
+    "version": "1.0.0",
+    "description": "RapidAPI: shake-chillies-shake-chillies-default/crunchbase4"
+  },
+  "servers": [
+    {
+      "url": "https://crunchbase4.p.rapidapi.com"
+    }
+  ],
+  "paths": {
+    "/company": {
+      "post": {
+        "summary": "Company details",
+        "description": "Get company details such as - about - founded_year  - funding - industries - location - long_description - size - website",
+        "operationId": "company_details",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-RapidAPI-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiAuth": []
+    }
+  ]
+}
